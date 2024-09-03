@@ -32,22 +32,22 @@ export default async function Home() {
 	
   const  articles = await requet(); 
   
-  return (<main><pre> 
+  return (<main ><pre> 
 	
 	</pre>
 	
 	
 	
-	
+	<h2>. BLOG .</h2>
 	 <div className = "grid grid-cols-3 gap-5" >
 		
 		{articles.map((post) => 
-		<div className = "size-62 bg-blue-400 rounded-lg"  >
+		<div className = "size-62 bg-blue-400 rounded-lg "  >
 			<img src={post.cover_image} className="rounded-lg" />
-			<p>{post.created_at}</p>
+			
 			<p><b>{post.title}</b></p>
 			<p>{post.description}</p>
-			
+			<p className="text-center">Published {post.created_at}</p>
 
 			
 
@@ -55,6 +55,8 @@ export default async function Home() {
 		</div>
 	)}
 	</div>
+
+	<button className> Page suivante </button>
 
 </main>);
 }
