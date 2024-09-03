@@ -39,14 +39,17 @@ export default async function Home() {
 	
 	
 	
-	 <div className = "grid grid-cols-3 gap-2" >
+	 <div className = "grid grid-cols-3 gap-5" >
 		
 		{articles.map((post) => 
-		<div className = "size-62" >
-			<img src={post.cover_image}/>
+		<div className = "size-62 bg-blue-400 rounded-lg"  >
+			<img src={post.cover_image} className="rounded-lg" />
+			<p>{post.created_at}</p>
+			<p><b>{post.title}</b></p>
+			<p>{post.description}</p>
+			
 
-
-
+			
 
 
 		</div>
