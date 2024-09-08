@@ -5,5 +5,6 @@ export type Post = {
     description: string;
     cover_image: string;
     created_at: string;
+    body_html: string;
   };
   
